@@ -1,0 +1,50 @@
+<ion-content>
+<ion-grid *ngIf="meteo">
+  <ion-row>
+  <ion-col width-50 offset-25>
+    <h2 class="lieu">{{meteo.city.name}}</h2>
+    <div class="icon"><img src="http://openweathermap.org/img/w/{{meteo.list[0].weather[0].icon}}.png" alt=""></div>
+    <h3 class="desc">{{meteo.list[0].weather[0].description}}</h3>
+    <h1 class="temp">{{meteo.list[0].main.temp}}&deg;</h1>
+  </ion-col>
+</ion-row>
+</ion-grid>
+<ion-grid>
+    <ion-row class="Titre">
+        <ion-col size="3"><div>Jour</div></ion-col>
+        <ion-col size="3"><div>Météo</div></ion-col>
+        <ion-col size="3"><div>Température Min</div></ion-col>
+        <ion-col size="3"><div>Température Max</div></ion-col>
+      </ion-row>
+    <ion-row class="Jour1">
+      <ion-col size="3"><div>{{meteo.list[0].dt_txt | date:'EEEE'}}</div></ion-col>
+      <ion-col size="3"><img src="http://openweathermap.org/img/w/{{meteo.list[0].weather[0].icon}}.png" alt=""></ion-col>
+      <ion-col size="3"><div>{{meteo.list[0].main.temp_min}}</div></ion-col>
+      <ion-col size="3"><div>{{meteo.list[0].main.temp_max}}</div></ion-col>
+    </ion-row>
+    <ion-row class="Jour2">
+        <ion-col size="3"><div>{{meteo.list[3].dt_txt | date:'EEEE'}}</div></ion-col>
+        <ion-col size="3"><img src="http://openweathermap.org/img/w/{{meteo.list[3].weather[0].icon}}.png" alt=""></ion-col>
+        <ion-col size="3"><div>{{meteo.list[3].main.temp_min}}</div></ion-col>
+        <ion-col size="3"><div>{{meteo.list[3].main.temp_max}}</div></ion-col>
+      </ion-row>
+      <ion-row class="Jour3">
+          <ion-col size="3"><div>{{meteo.list[11].dt_txt | date:'EEEE'}}</div></ion-col>
+          <ion-col size="3"><img src="http://openweathermap.org/img/w/{{meteo.list[11].weather[0].icon}}.png" alt=""></ion-col>
+          <ion-col size="3"><div>{{meteo.list[11].main.temp_min}}</div></ion-col>
+          <ion-col size="3"><div>{{meteo.list[11].main.temp_max}}</div></ion-col>
+        </ion-row>
+        <ion-row class="Jour4">
+            <ion-col size="3"><div>{{meteo.list[19].dt_txt | date:'EEEE'}}</div></ion-col>
+            <ion-col size="3"><img src="http://openweathermap.org/img/w/{{meteo.list[19].weather[0].icon}}.png" alt=""></ion-col>
+            <ion-col size="3"><div>{{meteo.list[19].main.temp_min}}</div></ion-col>
+            <ion-col size="3"><div>{{meteo.list[19].main.temp_max}}</div></ion-col>
+          </ion-row>
+          <ion-row class="Jour5">
+              <ion-col size="3"><div>{{meteo.list[28].dt_txt | date:'EEEE'}}</div></ion-col>
+              <ion-col size="3"><img src="http://openweathermap.org/img/w/{{meteo.list[28].weather[0].icon}}.png" alt=""></ion-col>
+              <ion-col size="3"><div>{{meteo.list[28].main.temp_min}}</div></ion-col>
+              <ion-col size="3"><div>{{meteo.list[28].main.temp_max}}</div></ion-col>
+            </ion-row>
+  </ion-grid>
+</ion-content>
